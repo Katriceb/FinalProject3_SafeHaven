@@ -5,7 +5,8 @@ import LoginForm from '../components/LoginForm'
 function AuthPage(props) {
   return (
     <>
-    <h1>AuthPage</h1>
+  
+    <h1><div>SaFe Haven Resources </div></h1>
       <SignUpForm setUser={props.setUser}/>
       <LoginForm setUser={props.setUser} />
     </>

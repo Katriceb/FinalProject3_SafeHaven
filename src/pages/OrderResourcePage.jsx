@@ -1,7 +1,7 @@
 import React from 'react'
 import {checkToken} from '../utilities/users-services';
 
-function OrderHistoryPage() {
+function OrderResourcePage() {
   const handleCheckToken = async () => {
     try {
       const expDate = await checkToken()
@@ -13,10 +13,10 @@ function OrderHistoryPage() {
 
   return (
     <div>
-      <h1>OrderHistoryPage</h1>
+      <h1>OrderResourcePage</h1>
       <button onClick={handleCheckToken}>Check Log In Expiration</button>
     </div>
   )
 }
 
-export default OrderHistoryPage
+export default OrderResourcePage

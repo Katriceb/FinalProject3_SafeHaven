@@ -13,9 +13,9 @@ function NavBar(props) {
 
   return (
     <nav>
-        <Link to='/orders'>Order History</Link>
+        <Link to='/orders'>Order Resource History</Link>
         &nbsp; | &nbsp;
-        <Link to='/orders/new'>New Orders</Link>
+        <Link to='/orders/new'>New Resource Orders</Link>
         &nbsp; | &nbsp;
         <span>Welcome, {props.user.name}</span>
         &nbsp; | &nbsp;

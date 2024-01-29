@@ -6,8 +6,8 @@ function AuthPage(props) {
   return (
     <>
     <h1>AuthPage</h1>
-    <SignUpForm setUser={props.setUser}/>
-    <LoginForm setUser={props.setUser} />
+      <SignUpForm setUser={props.setUser}/>
+      <LoginForm setUser={props.setUser} />
     </>
   )
 }

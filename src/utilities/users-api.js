@@ -1,19 +1,18 @@
 // users-api.js
 import { getToken } from './users-services';
-
-// This is the base path of the Express route that we'll define
-const BASE_URL = '/api/users';
+import BASE_URL from './BASE_URL.js'
+const USER_BASE = BASE_URL + '/api/users'
 
 export function signUp(userData) {
-  return sendRequest(BASE_URL, 'POST', userData);
+  return sendRequest(USER_BASE, 'POST', userData);
 }
 
 export function login(credentials) {
-  return sendRequest(`${BASE_URL}/login`, 'POST', credentials);
+  return sendRequest(`${USER_BASE}/login`, 'POST', credentials);
 }
 
 export function checkToken() {
-    return sendRequest(`${BASE_URL}/check-token`)
+    return sendRequest(`${USER_BASE}/check-token`)
 }
 
 /*--- Helper Functions ---*/
@@ -46,7 +45,7 @@ async function sendRequest(url, method = 'GET', payload = null) {
 // export async function signUp(userData) {
 //     // Fetch uses an options object as a second arg to make requests
 //     // Other than basic GET requests, include data, headers, etc
-//     const res = await fetch(BASE_URL, {
+//     const res = await fetch(USER_BASE, {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         // Fetch requires data payloads to be stringified
@@ -64,7 +63,7 @@ async function sendRequest(url, method = 'GET', payload = null) {
 
 // export async function login(credentials) {
     
-//     const res = await fetch(BASE_URL+'/login', {
+//     const res = await fetch(USER_BASE+'/login', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         // Fetch requires data payloads to be stringified

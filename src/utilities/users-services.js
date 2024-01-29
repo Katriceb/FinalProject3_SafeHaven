@@ -38,6 +38,9 @@ export function getToken() {
     }
     return token;
 }
+export function getItem() {
+    return sendRequest(`${BASE_URL}/cart`);
+}
 
 export function getUser() {
     const token = getToken();
